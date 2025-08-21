@@ -1,0 +1,506 @@
+{
+  "backend": {
+    "status": "down",
+    "tests": {
+      "root": {
+        "success": false,
+        "error": "Timeout (15s)",
+        "responseTime": 15000,
+        "url": "https://backend-api-final-production.up.railway.app"
+      },
+      "/api": {
+        "success": false,
+        "error": "Timeout (15s)",
+        "responseTime": 15000,
+        "url": "https://backend-api-final-production.up.railway.app/api"
+      },
+      "/swagger": {
+        "success": false,
+        "error": "Timeout (15s)",
+        "responseTime": 15000,
+        "url": "https://backend-api-final-production.up.railway.app/swagger"
+      },
+      "/health": {
+        "success": false,
+        "error": "Timeout (15s)",
+        "responseTime": 15000,
+        "url": "https://backend-api-final-production.up.railway.app/health"
+      }
+    },
+    "summary": {
+      "available": false,
+      "reason": "Todos os endpoints retornaram erro 502",
+      "recommendation": "Necessário redeploy do backend no Railway"
+    }
+  },
+  "admin": {
+    "status": "up",
+    "tests": {
+      "Home": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 576,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:02 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "o_2A1m8eR5uar38jozsQ6Q",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app"
+      },
+      "Login": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 449,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:03 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "lOeMgDOFQTGAj2Y4ezItjw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/login"
+      },
+      "Dashboard": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 383,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:03 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "ysNW0-6HQvGg5NWMAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/dashboard"
+      },
+      "Eleições": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 452,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:04 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "sCuJkuPpRPyr3ezHCx5-qw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/eleicoes"
+      },
+      "Chapas": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 419,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:04 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "v7AG5PXYSk-NpjUHAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/chapas"
+      },
+      "Denúncias": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 450,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:05 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "heLWqXRfSPiVo0HtPvyhXg",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/denuncias"
+      },
+      "Relatórios": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 396,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:05 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "iDquyZZgRr-uOMSawoOzXw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/relatorios"
+      },
+      "Analytics": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 392,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:05 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "CM0wwtAcQiSAJ1OkezItjw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/analytics"
+      },
+      "Usuários": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 414,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:06 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "XuqmTQ6KS0Kl_GNaPvyhXg",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/usuarios"
+      },
+      "Configurações": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!doctype html><html lang=\"pt-BR\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/favicon.ico\"/><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"/><meta name=\"theme-color\" content=\"#0066CC\"/><meta name=\"description\" content=\"Sistema Eleitoral CAU - Gestão de Eleições do Conselho de Arquitetura e Urbanismo\"/><title>CAU Electoral - Sistema de Gestão Eleitoral</title><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"><script defer=\"defer\" src=\"/static/js/main.3e207ea9.js\"></script><link href=\"/static/css/main.7cfb0608.css\" rel=\"stylesheet\"></head><body><noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript><div id=\"root\"></div></body></html>",
+        "responseTime": 423,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:06 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "J1FzDZntRNirqRPICx5-qw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://admin-frontend-final-production.up.railway.app/configuracoes"
+      }
+    },
+    "summary": {
+      "available": true,
+      "workingPages": 10,
+      "totalPages": 10,
+      "successRate": "100.00"
+    }
+  },
+  "public": {
+    "status": "up",
+    "tests": {
+      "Home": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 615,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:07 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "Jq3t-69TTK2w1DlJAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app"
+      },
+      "Entrar": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 473,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:07 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "O_NX3yPYTmCmhMeog4a9AQ",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/entrar"
+      },
+      "Eleições": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 373,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:08 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "7ilNgJBKQyOy9axjCx5-qw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/eleicoes"
+      },
+      "Chapas": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 435,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:08 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "g-PA90rKSOuihVrVezItjw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/chapas"
+      },
+      "Votação": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 522,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:09 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "dtb_IHHrSZyAOS4vwoOzXw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/votacao"
+      },
+      "Resultados": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 451,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:09 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "5lkM7DUoQaemxjoAAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/resultados"
+      },
+      "Denúncias": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 456,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:09 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "hyOhUTw1TBqQRo39PvyhXg",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/denuncias"
+      },
+      "Nova Denúncia": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 379,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:10 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "QBBmexojShSAzhiXAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/denuncias/nova"
+      },
+      "Transparência": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 414,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:10 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "3kiMxKjdSEeflb2JwoOzXw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/transparencia"
+      },
+      "FAQ": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 404,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:11 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "flwd-6YlQgKeeoghAax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/faq"
+      },
+      "Contato": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 446,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:11 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "RQ293KUlSF-Fhk9ABT7zVQ",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/contato"
+      },
+      "Calendário": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 457,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:12 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "vcPan-EHQ_W1SIf5Aax-fw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/calendario"
+      },
+      "Documentos": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 409,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:12 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "jyoLP6fGQzG1HfhNBT7zVQ",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/documentos"
+      },
+      "Normativas": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 366,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:12 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "oRXiiKdtTPGIxjLmwoOzXw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/normativas"
+      },
+      "Recursos": {
+        "success": true,
+        "statusCode": 200,
+        "data": "<!DOCTYPE html>\n<html lang=\"pt-BR\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Sistema Eleitoral CAU - Portal Público</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CiGncjRn.js\"></script>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>",
+        "responseTime": 471,
+        "headers": {
+          "cache-control": "public, max-age=0",
+          "content-type": "text/html; charset=utf-8",
+          "date": "Tue, 19 Aug 2025 22:27:13 GMT",
+          "server": "railway-edge",
+          "x-railway-edge": "railway/us-east4-eqdc4a",
+          "x-railway-request-id": "wllLTGqsTdOedfd1ezItjw",
+          "connection": "close",
+          "transfer-encoding": "chunked"
+        },
+        "url": "https://public-frontend-final-production.up.railway.app/recursos"
+      }
+    },
+    "summary": {
+      "available": true,
+      "workingPages": 15,
+      "totalPages": 15,
+      "successRate": "100.00"
+    }
+  },
+  "overall": {
+    "servicesUp": 2,
+    "totalServices": 3,
+    "systemAvailability": "66.67",
+    "backend": {
+      "available": false,
+      "reason": "Todos os endpoints retornaram erro 502",
+      "recommendation": "Necessário redeploy do backend no Railway"
+    },
+    "admin": {
+      "available": true,
+      "workingPages": 10,
+      "totalPages": 10,
+      "successRate": "100.00"
+    },
+    "public": {
+      "available": true,
+      "workingPages": 15,
+      "totalPages": 15,
+      "successRate": "100.00"
+    },
+    "timestamp": "2025-08-19T22:27:13.362Z"
+  }
+}

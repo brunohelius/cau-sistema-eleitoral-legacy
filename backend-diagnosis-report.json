@@ -1,0 +1,184 @@
+{
+  "timestamp": "2025-08-19T22:40:01.894Z",
+  "backendUrl": "https://backend-api-final-production.up.railway.app",
+  "railwayStatus": {
+    "accessible": false,
+    "statusCode": "UNKNOWN",
+    "headers": {},
+    "errorType": "CRITICAL"
+  },
+  "endpointTests": [
+    {
+      "name": "Root",
+      "path": "/",
+      "url": "https://backend-api-final-production.up.railway.app/",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "Health Check",
+      "path": "/health",
+      "url": "https://backend-api-final-production.up.railway.app/health",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "API Health",
+      "path": "/api/health",
+      "url": "https://backend-api-final-production.up.railway.app/api/health",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "Swagger UI",
+      "path": "/swagger",
+      "url": "https://backend-api-final-production.up.railway.app/swagger",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "Swagger JSON",
+      "path": "/swagger/v1/swagger.json",
+      "url": "https://backend-api-final-production.up.railway.app/swagger/v1/swagger.json",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "API Root",
+      "path": "/api",
+      "url": "https://backend-api-final-production.up.railway.app/api",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    },
+    {
+      "name": "Auth Status",
+      "path": "/api/auth/status",
+      "url": "https://backend-api-final-production.up.railway.app/api/auth/status",
+      "status": "TIMEOUT",
+      "error": "Request timeout (15s)",
+      "responseTime": null,
+      "headers": {},
+      "contentLength": 0,
+      "analysis": {
+        "accessible": false,
+        "railwayRelated": false,
+        "serviceIssue": false
+      }
+    }
+  ],
+  "possibleCauses": [
+    {
+      "cause": "DOTNET_DEPENDENCY_ERROR",
+      "description": "Erro de dependências .NET ou packages NuGet",
+      "likelihood": "MEDIUM",
+      "evidence": "Aplicação .NET em ambiente Linux/Docker"
+    },
+    {
+      "cause": "DATABASE_CONNECTION_ERROR",
+      "description": "Falha na conexão com PostgreSQL",
+      "likelihood": "HIGH",
+      "evidence": "Sistema depende de banco de dados para inicializar"
+    },
+    {
+      "cause": "ENVIRONMENT_VARIABLES_ERROR",
+      "description": "Configuração incorreta de variáveis de ambiente",
+      "likelihood": "MEDIUM",
+      "evidence": "Sistema depende de configurações específicas"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Verificar logs Railway detalhados",
+      "command": "railway logs --tail 100",
+      "description": "Examinar logs de startup e runtime para identificar erro específico"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Testar conexão com banco de dados",
+      "command": "railway run dotnet ef database update",
+      "description": "Verificar se migrations estão aplicadas e conexão DB funciona"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Redeploy completo do serviço",
+      "command": "railway up --detach",
+      "description": "Forçar rebuild e redeploy do container"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Verificar Dockerfile e configurações",
+      "description": "Revisar arquivo Dockerfile e configurações de porta/ambiente"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Testar localmente",
+      "command": "dotnet run --project SistemaEleitoral.Api",
+      "description": "Verificar se aplicação funciona localmente"
+    },
+    {
+      "priority": "LOW",
+      "action": "Verificar limites de recursos Railway",
+      "description": "Confirmar se serviço não está excedendo limites de CPU/memória"
+    }
+  ],
+  "healthChecks": {
+    "network": false,
+    "dns": false,
+    "ssl": true,
+    "service": false
+  },
+  "railwayInfo": {
+    "edge": null,
+    "fallback": false,
+    "requestId": null
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "timestamp": "2025-08-19T22:42:40.859Z",
+  "overallStatus": "DEGRADED",
+  "services": {
+    "backend": {
+      "service": "backend",
+      "baseUrl": "https://backend-api-final-production.up.railway.app",
+      "overallStatus": "CRITICAL",
+      "healthScore": 0,
+      "totalTests": 3,
+      "passedTests": 0,
+      "failedTests": 3,
+      "endpoints": [
+        {
+          "endpoint": "/api/health",
+          "url": "https://backend-api-final-production.up.railway.app/api/health",
+          "status": "TIMEOUT",
+          "success": false,
+          "responseTime": 10000,
+          "error": "Request timeout"
+        },
+        {
+          "endpoint": "/swagger",
+          "url": "https://backend-api-final-production.up.railway.app/swagger",
+          "status": "TIMEOUT",
+          "success": false,
+          "responseTime": 10000,
+          "error": "Request timeout"
+        },
+        {
+          "endpoint": "/api/auth/status",
+          "url": "https://backend-api-final-production.up.railway.app/api/auth/status",
+          "status": "TIMEOUT",
+          "success": false,
+          "responseTime": 10000,
+          "error": "Request timeout"
+        }
+      ],
+      "timestamp": "2025-08-19T22:43:11.810Z"
+    },
+    "admin": {
+      "service": "admin",
+      "baseUrl": "https://admin-frontend-final-production.up.railway.app",
+      "overallStatus": "HEALTHY",
+      "healthScore": 100,
+      "totalTests": 2,
+      "passedTests": 2,
+      "failedTests": 0,
+      "endpoints": [
+        {
+          "endpoint": "/",
+          "url": "https://admin-frontend-final-production.up.railway.app/",
+          "status": 200,
+          "success": true,
+          "responseTime": 579
+        },
+        {
+          "endpoint": "/login",
+          "url": "https://admin-frontend-final-production.up.railway.app/login",
+          "status": 200,
+          "success": true,
+          "responseTime": 453
+        }
+      ],
+      "timestamp": "2025-08-19T22:43:12.849Z"
+    },
+    "public": {
+      "service": "public",
+      "baseUrl": "https://public-frontend-final-production.up.railway.app",
+      "overallStatus": "HEALTHY",
+      "healthScore": 100,
+      "totalTests": 3,
+      "passedTests": 3,
+      "failedTests": 0,
+      "endpoints": [
+        {
+          "endpoint": "/",
+          "url": "https://public-frontend-final-production.up.railway.app/",
+          "status": 200,
+          "success": true,
+          "responseTime": 550
+        },
+        {
+          "endpoint": "/login",
+          "url": "https://public-frontend-final-production.up.railway.app/login",
+          "status": 200,
+          "success": true,
+          "responseTime": 383
+        },
+        {
+          "endpoint": "/eleicoes",
+          "url": "https://public-frontend-final-production.up.railway.app/eleicoes",
+          "status": 200,
+          "success": true,
+          "responseTime": 402
+        }
+      ],
+      "timestamp": "2025-08-19T22:43:14.192Z"
+    }
+  },
+  "summary": {
+    "totalServices": 3,
+    "healthyServices": 2,
+    "degradedServices": 0,
+    "criticalServices": 1,
+    "systemScore": "66.7"
+  },
+  "alerts": [
+    {
+      "severity": "CRITICAL",
+      "service": "backend",
+      "message": "Serviço backend com falhas críticas (0%)"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "URGENT",
+      "action": "Reiniciar serviço backend Railway",
+      "command": "cd sistema-eleitoral-cau-backend && railway up",
+      "reason": "Backend API completamente offline"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Verificar logs detalhados",
+      "command": "railway logs",
+      "reason": "1 serviço(s) em estado crítico"
+    }
+  ]
+}
