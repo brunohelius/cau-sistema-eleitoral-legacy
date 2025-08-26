@@ -1,0 +1,918 @@
+{
+  "resumo": {
+    "totalEE": 5,
+    "totalSE": 7,
+    "totalCE": 4,
+    "pontosEE": 17,
+    "pontosSE": 38,
+    "pontosCE": 15,
+    "pontosTotal": 70
+  },
+  "funcoes": {
+    "entradasExternas": [
+      {
+        "nome": "Denuncia.enviarEmailResponsaveis",
+        "controller": "Denuncia",
+        "metodo": "enviarEmailResponsaveis",
+        "parametros": [
+          "$idDenuncia"
+        ],
+        "linhas": 102,
+        "rota": {
+          "method": "GET",
+          "route": "teste/email/{idDenuncia}",
+          "controller": "Denuncia",
+          "action": "enviarEmailResponsaveis",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia",
+          "DenunciaAdmitida",
+          "RecursoDenuncia"
+        ],
+        "derEntrada": 1,
+        "derSaida": 21,
+        "isTransacional": true,
+        "tipo": "EE",
+        "descricao": "Salva dados - Denuncia",
+        "complexidade": "Média",
+        "pontosFuncao": 4
+      },
+      {
+        "nome": "RecursoJulgamentoAdmissibilidade.salvar",
+        "controller": "RecursoJulgamentoAdmissibilidade",
+        "metodo": "salvar",
+        "parametros": [
+          "RecursoJulgamentoAdmissibilidadeBO $recursoJulgamentoAdmissibilidadeBO"
+        ],
+        "linhas": 107,
+        "rota": {
+          "method": "POST",
+          "route": "denuncia/recurso-julgamento-admissibilidade",
+          "controller": "RecursoJulgamentoAdmissibilidade",
+          "action": "salvar",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia",
+          "JulgamentoAdmissibilidade",
+          "Profissional"
+        ],
+        "derEntrada": 1,
+        "derSaida": 29,
+        "isTransacional": true,
+        "tipo": "EE",
+        "descricao": "Processamento de dados - Recurso Julgamento Admissibilidade",
+        "complexidade": "Média",
+        "pontosFuncao": 4
+      },
+      {
+        "nome": "JulgamentoAdmissibilidade.salvar",
+        "controller": "JulgamentoAdmissibilidade",
+        "metodo": "salvar",
+        "parametros": [
+          "$idDenuncia",
+          "JulgamentoAdmissibilidadeBO $julgamentoDenunciaBO"
+        ],
+        "linhas": 45,
+        "rota": {
+          "method": "POST",
+          "route": "denuncia/{idDenuncia}/julgar_admissibilidade",
+          "controller": "JulgamentoAdmissibilidade",
+          "action": "salvar",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia"
+        ],
+        "derEntrada": 2,
+        "derSaida": 13,
+        "isTransacional": true,
+        "tipo": "EE",
+        "descricao": "Processamento de dados - Julgamento Admissibilidade",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      },
+      {
+        "nome": "JulgamentoAlegacaoImpugResultado.downloadDocumento",
+        "controller": "JulgamentoAlegacaoImpugResultado",
+        "metodo": "downloadDocumento",
+        "parametros": [
+          "$idJulgamento"
+        ],
+        "linhas": 49,
+        "rota": {
+          "method": "GET",
+          "route": "documento/{idJulgamento}/download",
+          "controller": "JulgamentoAlegacaoImpugResultado",
+          "action": "downloadDocumento",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 1,
+        "derSaida": 12,
+        "isTransacional": true,
+        "tipo": "EE",
+        "descricao": "Processamento de dados - Julgamento Alegacao Impug Resultado",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      },
+      {
+        "nome": "JulgamentoRecursoAdmissibilidade.salvar",
+        "controller": "JulgamentoRecursoAdmissibilidade",
+        "metodo": "salvar",
+        "parametros": [
+          "JulgamentoRecursoAdmissibilidadeBO $julgamentoRecursoAdmissibilidadeBO"
+        ],
+        "linhas": 43,
+        "rota": {
+          "method": "POST",
+          "route": "denuncia/julgamento-recurso-admissibilidade",
+          "controller": "JulgamentoRecursoAdmissibilidade",
+          "action": "salvar",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia"
+        ],
+        "derEntrada": 1,
+        "derSaida": 13,
+        "isTransacional": true,
+        "tipo": "EE",
+        "descricao": "Processamento de dados - Julgamento Recurso Admissibilidade",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      }
+    ],
+    "saidasExternas": [
+      {
+        "nome": "Calendario.gerarDocumento",
+        "controller": "Calendario",
+        "metodo": "gerarDocumento",
+        "parametros": [],
+        "linhas": 255,
+        "rota": null,
+        "alrsReferenciados": [
+          "Calendario",
+          "JustificativaAlteracaoCalendario"
+        ],
+        "derEntrada": 0,
+        "derSaida": 45,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Gera documento - Calendario",
+        "complexidade": "Alta",
+        "pontosFuncao": 7
+      },
+      {
+        "nome": "Denuncia.emailSend",
+        "controller": "Denuncia",
+        "metodo": "emailSend",
+        "parametros": [
+          "$idDenuncia",
+          "$idTipoDenuncia"
+        ],
+        "linhas": 306,
+        "rota": {
+          "method": "GET",
+          "route": "email/admitir/{idDenuncia}/tipoDenuncia/{idTipoDenuncia}",
+          "controller": "Denuncia",
+          "action": "emailSend",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia",
+          "DenunciaDefesa",
+          "DenunciaInadmitida",
+          "MembroComissao",
+          "Pessoa",
+          "Profissional",
+          "Uf",
+          "Usuario"
+        ],
+        "derEntrada": 2,
+        "derSaida": 74,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Saída de dados - Denuncia",
+        "complexidade": "Alta",
+        "pontosFuncao": 7
+      },
+      {
+        "nome": "MembroComissao.getPorFiltro",
+        "controller": "MembroComissao",
+        "metodo": "getPorFiltro",
+        "parametros": [],
+        "linhas": 352,
+        "rota": {
+          "method": "POST",
+          "route": "membroComissao/filtro",
+          "controller": "MembroComissao",
+          "action": "getPorFiltro",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Calendario",
+          "Conselheiro",
+          "Declaracao",
+          "Denuncia",
+          "InformacaoComissaoMembro",
+          "MembroComissao",
+          "Pessoa",
+          "Uf",
+          "Usuario"
+        ],
+        "derEntrada": 0,
+        "derSaida": 77,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Saída de dados - Membro Comissao",
+        "complexidade": "Alta",
+        "pontosFuncao": 7
+      },
+      {
+        "nome": "ParametroConselheiro.gerarDocumentoPDFListaConselheiros",
+        "controller": "ParametroConselheiro",
+        "metodo": "gerarDocumentoPDFListaConselheiros",
+        "parametros": [
+          "$id"
+        ],
+        "linhas": 47,
+        "rota": {
+          "method": "GET",
+          "route": "conselheiros/atividadeSecundaria/{id}/gerarPDF",
+          "controller": "ParametroConselheiro",
+          "action": "gerarDocumentoPDFListaConselheiros",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "ParametroConselheiro"
+        ],
+        "derEntrada": 1,
+        "derSaida": 21,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Gera PDF - Parametro Conselheiro",
+        "complexidade": "Média",
+        "pontosFuncao": 5
+      },
+      {
+        "nome": "ChapaEleicao.gerarCSVChapasTrePorUf",
+        "controller": "ChapaEleicao",
+        "metodo": "gerarCSVChapasTrePorUf",
+        "parametros": [
+          "int $idCalendario",
+          "int $idCauUf"
+        ],
+        "linhas": 6,
+        "rota": {
+          "method": "GET",
+          "route": "chapas/{idCalendario}/gerarCSVChapasTrePorUf/{idCauUf}",
+          "controller": "ChapaEleicao",
+          "action": "gerarCSVChapasTrePorUf",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 2,
+        "derSaida": 3,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Saída de dados - Chapa Eleicao",
+        "complexidade": "Baixa",
+        "pontosFuncao": 4
+      },
+      {
+        "nome": "DenunciaAdmitida.inserirRelator",
+        "controller": "DenunciaAdmitida",
+        "metodo": "inserirRelator",
+        "parametros": [
+          "$idDenuncia",
+          "DenunciaAdmitidaBO $denunciaAdmitidaBO"
+        ],
+        "linhas": 38,
+        "rota": {
+          "method": "POST",
+          "route": "denuncia/{idDenuncia}/relator",
+          "controller": "DenunciaAdmitida",
+          "action": "inserirRelator",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "Denuncia",
+          "Profissional"
+        ],
+        "derEntrada": 2,
+        "derSaida": 13,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Saída de dados - Denuncia Admitida",
+        "complexidade": "Baixa",
+        "pontosFuncao": 4
+      },
+      {
+        "nome": "ParametroConselheiro.gerarDocumentoXSLListaConselheiros",
+        "controller": "ParametroConselheiro",
+        "metodo": "gerarDocumentoXSLListaConselheiros",
+        "parametros": [
+          "$id"
+        ],
+        "linhas": 6,
+        "rota": {
+          "method": "GET",
+          "route": "conselheiros/atividadeSecundaria/{id}/gerarXLS",
+          "controller": "ParametroConselheiro",
+          "action": "gerarDocumentoXSLListaConselheiros",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 1,
+        "derSaida": 3,
+        "isTransacional": true,
+        "tipo": "SE",
+        "descricao": "Gera documento - Parametro Conselheiro",
+        "complexidade": "Baixa",
+        "pontosFuncao": 4
+      }
+    ],
+    "consultasExternas": [
+      {
+        "nome": "Profissional.getProfissionaisPorFiltro",
+        "controller": "Profissional",
+        "metodo": "getProfissionaisPorFiltro",
+        "parametros": [],
+        "linhas": 64,
+        "rota": {
+          "method": "POST",
+          "route": "profissionais/filtro",
+          "controller": "Profissional",
+          "action": "getProfissionaisPorFiltro",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 0,
+        "derSaida": 27,
+        "isTransacional": true,
+        "tipo": "CE",
+        "descricao": "Obtém dados - Profissional",
+        "complexidade": "Alta",
+        "pontosFuncao": 6
+      },
+      {
+        "nome": "AtividadePrincipalCalendario.getAtividadePrincipal",
+        "controller": "AtividadePrincipalCalendario",
+        "metodo": "getAtividadePrincipal",
+        "parametros": [],
+        "linhas": 32,
+        "rota": {
+          "method": "GET",
+          "route": "atividadesPrincipais",
+          "controller": "AtividadePrincipalCalendario",
+          "action": "getAtividadePrincipal",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 0,
+        "derSaida": 15,
+        "isTransacional": true,
+        "tipo": "CE",
+        "descricao": "Obtém dados - Atividade Principal Calendario",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      },
+      {
+        "nome": "DefesaImpugnacao.getDefesaImpugnacaoValidacaoAcessoProfissional",
+        "controller": "DefesaImpugnacao",
+        "metodo": "getDefesaImpugnacaoValidacaoAcessoProfissional",
+        "parametros": [
+          "$idPedidoImpugnacao"
+        ],
+        "linhas": 18,
+        "rota": {
+          "method": "GET",
+          "route": "defesaImpugnacao/pedidosImpugnacao/{idPedidoImpugnacao}/validarProfissional",
+          "controller": "DefesaImpugnacao",
+          "action": "getDefesaImpugnacaoValidacaoAcessoProfissional",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [],
+        "derEntrada": 1,
+        "derSaida": 9,
+        "isTransacional": true,
+        "tipo": "CE",
+        "descricao": "Obtém dados - Defesa Impugnacao",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      },
+      {
+        "nome": "MembroComissao.getListaMembrosPorMembroCauUf",
+        "controller": "MembroComissao",
+        "metodo": "getListaMembrosPorMembroCauUf",
+        "parametros": [
+          "$id",
+          "$idCauUf"
+        ],
+        "linhas": 78,
+        "rota": {
+          "method": "GET",
+          "route": "membroComissao/{id}/cauUf/{idCauUf}/lista",
+          "controller": "MembroComissao",
+          "action": "getListaMembrosPorMembroCauUf",
+          "isPublicRoute": false
+        },
+        "alrsReferenciados": [
+          "MembroComissao"
+        ],
+        "derEntrada": 2,
+        "derSaida": 15,
+        "isTransacional": true,
+        "tipo": "CE",
+        "descricao": "Obtém dados - Membro Comissao",
+        "complexidade": "Baixa",
+        "pontosFuncao": 3
+      }
+    ]
+  },
+  "modulos": {
+    "Sistema de Denúncias": {
+      "ee": 1,
+      "se": 2,
+      "ce": 0,
+      "pontos": 15,
+      "funcoes": [
+        {
+          "nome": "Denuncia.enviarEmailResponsaveis",
+          "controller": "Denuncia",
+          "metodo": "enviarEmailResponsaveis",
+          "parametros": [
+            "$idDenuncia"
+          ],
+          "linhas": 102,
+          "rota": {
+            "method": "GET",
+            "route": "teste/email/{idDenuncia}",
+            "controller": "Denuncia",
+            "action": "enviarEmailResponsaveis",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia",
+            "DenunciaAdmitida",
+            "RecursoDenuncia"
+          ],
+          "derEntrada": 1,
+          "derSaida": 21,
+          "isTransacional": true,
+          "tipo": "EE",
+          "descricao": "Salva dados - Denuncia",
+          "complexidade": "Média",
+          "pontosFuncao": 4
+        },
+        {
+          "nome": "Denuncia.emailSend",
+          "controller": "Denuncia",
+          "metodo": "emailSend",
+          "parametros": [
+            "$idDenuncia",
+            "$idTipoDenuncia"
+          ],
+          "linhas": 306,
+          "rota": {
+            "method": "GET",
+            "route": "email/admitir/{idDenuncia}/tipoDenuncia/{idTipoDenuncia}",
+            "controller": "Denuncia",
+            "action": "emailSend",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia",
+            "DenunciaDefesa",
+            "DenunciaInadmitida",
+            "MembroComissao",
+            "Pessoa",
+            "Profissional",
+            "Uf",
+            "Usuario"
+          ],
+          "derEntrada": 2,
+          "derSaida": 74,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Saída de dados - Denuncia",
+          "complexidade": "Alta",
+          "pontosFuncao": 7
+        },
+        {
+          "nome": "DenunciaAdmitida.inserirRelator",
+          "controller": "DenunciaAdmitida",
+          "metodo": "inserirRelator",
+          "parametros": [
+            "$idDenuncia",
+            "DenunciaAdmitidaBO $denunciaAdmitidaBO"
+          ],
+          "linhas": 38,
+          "rota": {
+            "method": "POST",
+            "route": "denuncia/{idDenuncia}/relator",
+            "controller": "DenunciaAdmitida",
+            "action": "inserirRelator",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia",
+            "Profissional"
+          ],
+          "derEntrada": 2,
+          "derSaida": 13,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Saída de dados - Denuncia Admitida",
+          "complexidade": "Baixa",
+          "pontosFuncao": 4
+        }
+      ]
+    },
+    "Sistema de Julgamentos": {
+      "ee": 4,
+      "se": 0,
+      "ce": 0,
+      "pontos": 13,
+      "funcoes": [
+        {
+          "nome": "RecursoJulgamentoAdmissibilidade.salvar",
+          "controller": "RecursoJulgamentoAdmissibilidade",
+          "metodo": "salvar",
+          "parametros": [
+            "RecursoJulgamentoAdmissibilidadeBO $recursoJulgamentoAdmissibilidadeBO"
+          ],
+          "linhas": 107,
+          "rota": {
+            "method": "POST",
+            "route": "denuncia/recurso-julgamento-admissibilidade",
+            "controller": "RecursoJulgamentoAdmissibilidade",
+            "action": "salvar",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia",
+            "JulgamentoAdmissibilidade",
+            "Profissional"
+          ],
+          "derEntrada": 1,
+          "derSaida": 29,
+          "isTransacional": true,
+          "tipo": "EE",
+          "descricao": "Processamento de dados - Recurso Julgamento Admissibilidade",
+          "complexidade": "Média",
+          "pontosFuncao": 4
+        },
+        {
+          "nome": "JulgamentoAdmissibilidade.salvar",
+          "controller": "JulgamentoAdmissibilidade",
+          "metodo": "salvar",
+          "parametros": [
+            "$idDenuncia",
+            "JulgamentoAdmissibilidadeBO $julgamentoDenunciaBO"
+          ],
+          "linhas": 45,
+          "rota": {
+            "method": "POST",
+            "route": "denuncia/{idDenuncia}/julgar_admissibilidade",
+            "controller": "JulgamentoAdmissibilidade",
+            "action": "salvar",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia"
+          ],
+          "derEntrada": 2,
+          "derSaida": 13,
+          "isTransacional": true,
+          "tipo": "EE",
+          "descricao": "Processamento de dados - Julgamento Admissibilidade",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        },
+        {
+          "nome": "JulgamentoAlegacaoImpugResultado.downloadDocumento",
+          "controller": "JulgamentoAlegacaoImpugResultado",
+          "metodo": "downloadDocumento",
+          "parametros": [
+            "$idJulgamento"
+          ],
+          "linhas": 49,
+          "rota": {
+            "method": "GET",
+            "route": "documento/{idJulgamento}/download",
+            "controller": "JulgamentoAlegacaoImpugResultado",
+            "action": "downloadDocumento",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 1,
+          "derSaida": 12,
+          "isTransacional": true,
+          "tipo": "EE",
+          "descricao": "Processamento de dados - Julgamento Alegacao Impug Resultado",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        },
+        {
+          "nome": "JulgamentoRecursoAdmissibilidade.salvar",
+          "controller": "JulgamentoRecursoAdmissibilidade",
+          "metodo": "salvar",
+          "parametros": [
+            "JulgamentoRecursoAdmissibilidadeBO $julgamentoRecursoAdmissibilidadeBO"
+          ],
+          "linhas": 43,
+          "rota": {
+            "method": "POST",
+            "route": "denuncia/julgamento-recurso-admissibilidade",
+            "controller": "JulgamentoRecursoAdmissibilidade",
+            "action": "salvar",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Denuncia"
+          ],
+          "derEntrada": 1,
+          "derSaida": 13,
+          "isTransacional": true,
+          "tipo": "EE",
+          "descricao": "Processamento de dados - Julgamento Recurso Admissibilidade",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        }
+      ]
+    },
+    "Gestão de Calendário Eleitoral": {
+      "ee": 0,
+      "se": 1,
+      "ce": 1,
+      "pontos": 10,
+      "funcoes": [
+        {
+          "nome": "Calendario.gerarDocumento",
+          "controller": "Calendario",
+          "metodo": "gerarDocumento",
+          "parametros": [],
+          "linhas": 255,
+          "rota": null,
+          "alrsReferenciados": [
+            "Calendario",
+            "JustificativaAlteracaoCalendario"
+          ],
+          "derEntrada": 0,
+          "derSaida": 45,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Gera documento - Calendario",
+          "complexidade": "Alta",
+          "pontosFuncao": 7
+        },
+        {
+          "nome": "AtividadePrincipalCalendario.getAtividadePrincipal",
+          "controller": "AtividadePrincipalCalendario",
+          "metodo": "getAtividadePrincipal",
+          "parametros": [],
+          "linhas": 32,
+          "rota": {
+            "method": "GET",
+            "route": "atividadesPrincipais",
+            "controller": "AtividadePrincipalCalendario",
+            "action": "getAtividadePrincipal",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 0,
+          "derSaida": 15,
+          "isTransacional": true,
+          "tipo": "CE",
+          "descricao": "Obtém dados - Atividade Principal Calendario",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        }
+      ]
+    },
+    "Gestão de Membros": {
+      "ee": 0,
+      "se": 1,
+      "ce": 1,
+      "pontos": 10,
+      "funcoes": [
+        {
+          "nome": "MembroComissao.getPorFiltro",
+          "controller": "MembroComissao",
+          "metodo": "getPorFiltro",
+          "parametros": [],
+          "linhas": 352,
+          "rota": {
+            "method": "POST",
+            "route": "membroComissao/filtro",
+            "controller": "MembroComissao",
+            "action": "getPorFiltro",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "Calendario",
+            "Conselheiro",
+            "Declaracao",
+            "Denuncia",
+            "InformacaoComissaoMembro",
+            "MembroComissao",
+            "Pessoa",
+            "Uf",
+            "Usuario"
+          ],
+          "derEntrada": 0,
+          "derSaida": 77,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Saída de dados - Membro Comissao",
+          "complexidade": "Alta",
+          "pontosFuncao": 7
+        },
+        {
+          "nome": "MembroComissao.getListaMembrosPorMembroCauUf",
+          "controller": "MembroComissao",
+          "metodo": "getListaMembrosPorMembroCauUf",
+          "parametros": [
+            "$id",
+            "$idCauUf"
+          ],
+          "linhas": 78,
+          "rota": {
+            "method": "GET",
+            "route": "membroComissao/{id}/cauUf/{idCauUf}/lista",
+            "controller": "MembroComissao",
+            "action": "getListaMembrosPorMembroCauUf",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "MembroComissao"
+          ],
+          "derEntrada": 2,
+          "derSaida": 15,
+          "isTransacional": true,
+          "tipo": "CE",
+          "descricao": "Obtém dados - Membro Comissao",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        }
+      ]
+    },
+    "Gestão de Conselheiros": {
+      "ee": 0,
+      "se": 2,
+      "ce": 0,
+      "pontos": 9,
+      "funcoes": [
+        {
+          "nome": "ParametroConselheiro.gerarDocumentoPDFListaConselheiros",
+          "controller": "ParametroConselheiro",
+          "metodo": "gerarDocumentoPDFListaConselheiros",
+          "parametros": [
+            "$id"
+          ],
+          "linhas": 47,
+          "rota": {
+            "method": "GET",
+            "route": "conselheiros/atividadeSecundaria/{id}/gerarPDF",
+            "controller": "ParametroConselheiro",
+            "action": "gerarDocumentoPDFListaConselheiros",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [
+            "ParametroConselheiro"
+          ],
+          "derEntrada": 1,
+          "derSaida": 21,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Gera PDF - Parametro Conselheiro",
+          "complexidade": "Média",
+          "pontosFuncao": 5
+        },
+        {
+          "nome": "ParametroConselheiro.gerarDocumentoXSLListaConselheiros",
+          "controller": "ParametroConselheiro",
+          "metodo": "gerarDocumentoXSLListaConselheiros",
+          "parametros": [
+            "$id"
+          ],
+          "linhas": 6,
+          "rota": {
+            "method": "GET",
+            "route": "conselheiros/atividadeSecundaria/{id}/gerarXLS",
+            "controller": "ParametroConselheiro",
+            "action": "gerarDocumentoXSLListaConselheiros",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 1,
+          "derSaida": 3,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Gera documento - Parametro Conselheiro",
+          "complexidade": "Baixa",
+          "pontosFuncao": 4
+        }
+      ]
+    },
+    "Gestão de Chapas e Candidaturas": {
+      "ee": 0,
+      "se": 1,
+      "ce": 0,
+      "pontos": 4,
+      "funcoes": [
+        {
+          "nome": "ChapaEleicao.gerarCSVChapasTrePorUf",
+          "controller": "ChapaEleicao",
+          "metodo": "gerarCSVChapasTrePorUf",
+          "parametros": [
+            "int $idCalendario",
+            "int $idCauUf"
+          ],
+          "linhas": 6,
+          "rota": {
+            "method": "GET",
+            "route": "chapas/{idCalendario}/gerarCSVChapasTrePorUf/{idCauUf}",
+            "controller": "ChapaEleicao",
+            "action": "gerarCSVChapasTrePorUf",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 2,
+          "derSaida": 3,
+          "isTransacional": true,
+          "tipo": "SE",
+          "descricao": "Saída de dados - Chapa Eleicao",
+          "complexidade": "Baixa",
+          "pontosFuncao": 4
+        }
+      ]
+    },
+    "Gestão de Profissionais": {
+      "ee": 0,
+      "se": 0,
+      "ce": 1,
+      "pontos": 6,
+      "funcoes": [
+        {
+          "nome": "Profissional.getProfissionaisPorFiltro",
+          "controller": "Profissional",
+          "metodo": "getProfissionaisPorFiltro",
+          "parametros": [],
+          "linhas": 64,
+          "rota": {
+            "method": "POST",
+            "route": "profissionais/filtro",
+            "controller": "Profissional",
+            "action": "getProfissionaisPorFiltro",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 0,
+          "derSaida": 27,
+          "isTransacional": true,
+          "tipo": "CE",
+          "descricao": "Obtém dados - Profissional",
+          "complexidade": "Alta",
+          "pontosFuncao": 6
+        }
+      ]
+    },
+    "Sistema de Impugnações": {
+      "ee": 0,
+      "se": 0,
+      "ce": 1,
+      "pontos": 3,
+      "funcoes": [
+        {
+          "nome": "DefesaImpugnacao.getDefesaImpugnacaoValidacaoAcessoProfissional",
+          "controller": "DefesaImpugnacao",
+          "metodo": "getDefesaImpugnacaoValidacaoAcessoProfissional",
+          "parametros": [
+            "$idPedidoImpugnacao"
+          ],
+          "linhas": 18,
+          "rota": {
+            "method": "GET",
+            "route": "defesaImpugnacao/pedidosImpugnacao/{idPedidoImpugnacao}/validarProfissional",
+            "controller": "DefesaImpugnacao",
+            "action": "getDefesaImpugnacaoValidacaoAcessoProfissional",
+            "isPublicRoute": false
+          },
+          "alrsReferenciados": [],
+          "derEntrada": 1,
+          "derSaida": 9,
+          "isTransacional": true,
+          "tipo": "CE",
+          "descricao": "Obtém dados - Defesa Impugnacao",
+          "complexidade": "Baixa",
+          "pontosFuncao": 3
+        }
+      ]
+    }
+  },
+  "timestamp": "2025-08-25T23:03:49.092Z"
+}
