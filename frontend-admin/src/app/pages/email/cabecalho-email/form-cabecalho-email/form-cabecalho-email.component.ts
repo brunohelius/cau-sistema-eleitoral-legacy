@@ -32,7 +32,6 @@ export class FormCabecalhoEmailComponent implements OnInit {
   public submitted: boolean;
   public acaoSistema: AcaoSistema;
   private totalCorpoEmailVinculado: number;
-  private arquivoCabecalho: any;
   public dropdownSettingsUF: any;
   public imgURLCabecalhoPreview: any;
   public imgURLRodapePreview: any;
@@ -281,7 +280,7 @@ export class FormCabecalhoEmailComponent implements OnInit {
   private setImgURLCabecalhoPreview(file) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = (_event) => {
+    reader.onload = () => {
       this.imgURLCabecalhoPreview = reader.result;
     }
   }
@@ -314,7 +313,7 @@ export class FormCabecalhoEmailComponent implements OnInit {
   private setImgURLRodapePreview(file) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = (_event) => {
+    reader.onload = () => {
       this.imgURLRodapePreview = reader.result;
     }
   }

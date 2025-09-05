@@ -457,7 +457,7 @@ export class ListChapaCauUfComponent implements OnInit {
      *
      * @param limitePaginacao
      */
-    public onChangeLimitePaginacao(limitePaginacao: any): void {
+    public onChangeLimitePaginacao(_limitePaginacao: any): void {
 
     }
 

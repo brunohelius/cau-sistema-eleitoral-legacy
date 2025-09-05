@@ -170,3 +170,4 @@ fabric.properties
 /composer.phar
 /storage/api-docs/
 /storage/eleitoralArquivos/
+node_modules

@@ -35,7 +35,6 @@ export class ListCalendarioComponent implements OnInit {
     public dropdownSettingsCalendario = {};
     public dropdownSettingsProcesso = {};
     modalRef: BsModalRef;
-    message: string;
     public showMessageFilter: Boolean;
 
     /**
@@ -270,9 +269,11 @@ export class ListCalendarioComponent implements OnInit {
     /**
      * Busca na lista de Calendario pelos filtro informados
      */
-    public pesquisar(): void {
+    public pesquisar(event?: Event): void {
         this.showMessageFilter = false;
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
         let escopo = this;
         let eleicao = [];
         let anos = [];

@@ -1,0 +1,24 @@
+<div class="app-container">
+  <!-- Loading Overlay -->
+  <div *ngIf="loading" class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Login Screen -->
+  <div *ngIf="!isLoggedIn" class="login-container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Main Application -->
+  <div *ngIf="isLoggedIn" class="main-container">
+    <app-sidebar></app-sidebar>
+    
+    <div class="content-wrapper">
+      <app-header></app-header>
+      
+      <main class="content">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>

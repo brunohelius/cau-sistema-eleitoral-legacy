@@ -50,10 +50,6 @@
         "rxjs": "~6.4.0",
         "tslib": "^1.10.0",
         "zone.js": "~0.9.1",
-        "@cau/component": "~1.0.0",
-        "@cau/layout": "~1.0.0",
-        "@cau/message": "~1.0.0",
-        "@cau/security": "~1.0.0",
         "@babel/preset-env": "^7.8.7"
     },
     "devDependencies": {

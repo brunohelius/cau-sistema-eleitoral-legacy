@@ -8,7 +8,8 @@ import { MessageResource, MESSAGE_RESOURCE_CONFIRM } from "@cau/message";
  * @author Squadra Tecnologia
  */
 export class AppMessage implements MessageResource, ValidationResource {
-
+    [key: string]: any;
+    
     private resource: Object;
 
     /**

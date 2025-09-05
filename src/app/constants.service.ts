@@ -292,6 +292,7 @@ export class Constants {
   public static TIPO_ATIVIDADE_PRINCIPAL_IMPUGNACAO_RESULTADO = 6;
   public static TIPO_ATIVIDADE_SECUNDARIA_CADASTRO_IMPUGNACAO_RESULTADO = 1;
   public static TIPO_ATIVIDADE_SECUNDARIA_ALEGACAO_IMPUGNACAO_RESULTADO = 2;
+  public static ATIVIDADE_SECUNDARIA_UM_PONTO_DOIS_QUANTIDADE_EMAILS = 2;
   /**
    * |--------------------------------------------------------------------------
    * | Constantes do Membro Chapa.

@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@cau/security": ["src/app/mocks/cau/security"],
+      "@cau/layout": ["src/app/mocks/cau/layout"],
+      "@cau/message": ["src/app/mocks/cau/message"],
+      "@cau/component": ["src/app/mocks/cau/component"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
